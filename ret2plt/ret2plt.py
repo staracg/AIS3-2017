@@ -5,6 +5,7 @@ from pwn import *
 context.arch = 'amd64'
 context.os = 'linux'
 context.log_level = 'debug'
+context.terminal = ['terminator', '-x', 'bash', '-c']
 
 #r = remote("pwnhub.com", 56026)
 r = remote("127.0.0.1", 8888)
