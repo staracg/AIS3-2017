@@ -3,6 +3,9 @@ from pwn import *
 
 context.arch = 'amd64'
 context.os = 'linux'
+context.log_level = 'debug'
+context.terminal = ['terminator', '-x', 'bash', '-c']
+
 r = remote("pwnhub.tw", 11112)
 
 shellcode = ''
